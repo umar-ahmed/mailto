@@ -10,7 +10,7 @@ export default function MailToForm({
   errors,
   handleChange,
   resetForm,
-  values: { to, subject, body }
+  values: { email, subject, body }
 }) {
   const commonProps = {
     fullWidth: true,
@@ -27,11 +27,11 @@ export default function MailToForm({
     <Container>
       <Form>
         <TextField
-          error={errors.to}
-          helperText={errors.to}
+          error={errors.email}
+          helperText={errors.email}
           label="Email"
-          name="to"
-          value={to}
+          name="email"
+          value={email}
           {...commonProps}
         />
         <TextField
