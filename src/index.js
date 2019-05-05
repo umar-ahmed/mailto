@@ -3,12 +3,10 @@ import ReactDOM from "react-dom";
 import { Formik } from "formik";
 import * as Yup from "yup";
 
-import AppBar from "@material-ui/core/AppBar";
 import Container from "@material-ui/core/Container";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 
 import App from "./components/App";
+import AppHeader from "./components/AppHeader";
 import MailToForm from "./components/MailToForm";
 import ResultCard from "./components/ResultCard";
 
@@ -37,13 +35,7 @@ function Root() {
 
   return (
     <App>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" color="inherit">
-            Mailto Link Generator
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <AppHeader />
       <Container maxWidth="md">
         <Formik
           initialValues={values}
